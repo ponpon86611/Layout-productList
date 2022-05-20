@@ -1,0 +1,235 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.d-flex {
+  display: flex;
+}
+
+body {
+  padding: 30px 42px 42px 60px;
+}
+
+.wrap {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.header {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.header .logo {
+  width: 220px;
+  height: 40px;
+}
+.header .nav {
+  align-items: center;
+}
+.header .nav li {
+  margin-left: 60px;
+}
+.header .nav li:last-child {
+  margin-left: 79px;
+}
+.header .nav li a {
+  display: block;
+  color: #3F5D45;
+  text-decoration: none;
+}
+.header .nav li a:hover {
+  border-bottom: 3px solid;
+  margin-bottom: -3px;
+}
+
+.banner {
+  margin-bottom: 60px;
+}
+.banner img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  margin-bottom: 30px;
+}
+.container .category {
+  width: 300px;
+  font-size: 24px;
+  margin-right: 20px;
+}
+.container .category h2 {
+  color: #fff;
+  background-color: #3F5D45;
+  padding: 16px 102px;
+}
+.container .category ul {
+  border: 1px solid #EAF0ED;
+}
+.container .category ul li {
+  border-bottom: 1px solid #EAF0ED;
+}
+.container .category ul li:last-child {
+  border: none;
+}
+.container .category ul a {
+  color: #3F5D45;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 16px 0;
+}
+.container .category ul a.active {
+  background-color: #EAF0ED;
+}
+.container .category ul a:hover:not(.active) {
+  background-color: #bdd0c7;
+}
+.container .product-list {
+  width: 620px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.container .product-list .product-card {
+  width: 300px;
+  position: relative;
+  font-size: 20px;
+  color: #3F5D45;
+  margin-bottom: 20px;
+  border: 1px solid #EAF0ED;
+}
+.container .product-list .product-card .hot {
+  background-color: #3F5D45;
+  width: 36px;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.2;
+}
+.container .product-list .product-card .favorite {
+  position: absolute;
+  top: 19px;
+  right: 22px;
+}
+.container .product-list .product-card .product-info .product-name {
+  padding: 14px 33px;
+  border-right: 1px solid #EAF0ED;
+  text-align: center;
+}
+.container .product-list .product-card .product-info .product-price {
+  width: 127px;
+  padding: 14px 0;
+  font-weight: bold;
+  text-align: center;
+}
+.container .product-list .product-card .add {
+  text-align: center;
+  width: 100%;
+  padding: 16px 0;
+  font-size: 24px;
+  background-color: #EAF0ED;
+  color: #3F5D45;
+  border: 1px solid #EAF0ED;
+  cursor: pointer;
+  position: relative;
+  font-weight: bold;
+  opacity: 0.9;
+  /*要做的 hover 效果若有背景色無法呈現，故需要稍微減低透明度*/
+}
+.container .product-list .product-card .add::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  left: 0;
+  top: 0;
+  transition: 0.3s;
+  background-color: #3F5D45;
+  height: 100%;
+  opacity: 0.3;
+  z-index: -1;
+}
+.container .product-list .product-card .add:hover::before {
+  width: 100%;
+}
+
+.page-num {
+  justify-content: flex-end;
+}
+.page-num .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  color: #3F5D45;
+  border: 1px solid #EAF0ED;
+  margin-left: -1px;
+}
+.page-num .page:hover:not(.active) {
+  background-color: #EAF0ED;
+}
+.page-num .active {
+  background: #3F5D45;
+  color: #fff;
+}/*# sourceMappingURL=productList.css.map */
